@@ -27,5 +27,20 @@
     <ClCompile Include="오픈채팅방.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="소수만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="자물쇠와열쇠.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="불량사용자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="호텔방배정.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="보행자천국.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

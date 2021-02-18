@@ -142,7 +142,12 @@
     <ClCompile Include="가사검색.cpp" />
     <ClCompile Include="기둥과보설치.cpp" />
     <ClCompile Include="길찾기게임.cpp" />
+    <ClCompile Include="보행자천국.cpp" />
+    <ClCompile Include="불량사용자.cpp" />
+    <ClCompile Include="소수만들기.cpp" />
     <ClCompile Include="오픈채팅방.cpp" />
+    <ClCompile Include="자물쇠와열쇠.cpp" />
+    <ClCompile Include="호텔방배정.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
