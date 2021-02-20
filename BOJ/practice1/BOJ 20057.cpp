@@ -11,7 +11,7 @@ int cnt = 1;
 
 void solve() {
 
-	if (dir == 0 && c>2) { //좌
+	if (dir == 0 && c > 2) { //좌
 		for (int i = 0; i < cnt; i++) {
 			if (r == 2 && c == 2) return; //마지막
 
@@ -38,18 +38,18 @@ void solve() {
 		dir = 1;
 		solve();
 	}
-	else if (dir == 1 && r<N+2) { //하
+	else if (dir == 1 && r < N + 2) { //하
 		for (int i = 0; i < cnt; i++) {
-			int y = A[r - 1][c];
+			int y = A[r + 1][c];
 			double d = y / 100.0;
 			int a = y - (int)(d * 7) - (int)(d * 7) - (int)(d * 1) - (int)(d * 1)
 				- (int)(d * 10) - (int)(d * 10) - (int)(d * 2) - (int)(d * 2)
 				- (int)(d * 5);
 
-			A[r - 2][c] += a;
-			A[r - 1][c] = 0;
+			A[r + 2][c] += a;
+			A[r + 1][c] = 0;
 
-			A[r - 3][c] += (int)(d * 5);
+			A[r + 3][c] += (int)(d * 5);
 			A[r][c - 1] += (int)(d);
 			A[r][c + 1] += (int)(d);
 			A[r + 1][c - 1] += (int)(d * 7);
@@ -64,7 +64,7 @@ void solve() {
 		cnt++;
 		solve();
 	}
-	else if (dir == 2 && c<N+2) { //우
+	else if (dir == 2 && c < N + 2) { //우
 		for (int i = 0; i < cnt; i++) {
 			int y = A[r][c + 1];
 			double d = y / 100.0;
@@ -89,7 +89,7 @@ void solve() {
 		dir = 3;
 		solve();
 	}
-	else if (dir == 3 && r>2) { //상
+	else if (dir == 3 && r > 2) { //상
 		for (int i = 0; i < cnt; i++) {
 			int y = A[r - 1][c];
 			double d = y / 100.0;
@@ -117,17 +117,17 @@ void solve() {
 	}
 }
 int result() {
-	int sum =0;
+	int sum = 0;
 	int total = 0;
 
-	for (int i = 0; i < N + 2; i++) {
-		for (int j = 0; j < N + 2; j++) {
+	for (int i = 0; i < N + 4; i++) {
+		for (int j = 0; j < N + 4; j++) {
 			total = total + A[i][j];
 		}
 	}
-	
-	for (int i = 2; i < N; i++) {
-		for (int j = 2; j < N; j++) {
+
+	for (int i = 2; i < N + 2; i++) {
+		for (int j = 2; j < N + 2; j++) {
 			sum = sum + A[i][j];
 		}
 	}
